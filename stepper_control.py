@@ -10,7 +10,7 @@ from urllib.parse import urlencode
 
 #api key for thingspeak channel
 #change this to appropriate key!!!
-api = "F29D62NPUGL4LIYU"
+api = "6RLY9LJUYXDJ84BJ"
 
 #get data from html form
 data = cgi.FieldStorage()
