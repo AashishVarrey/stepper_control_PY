@@ -1,5 +1,3 @@
-#!/usr/bin/python37all
-
 #necessary modules
 import json
 import cgi
@@ -37,26 +35,26 @@ params = urlencode(params)
 url = "https://api.thingspeak.com/update?" + params
 urlopen(url)
 
-print("Content-type:text/html\n\n")
+print("Content-type: text/html\n\n")
 print("""
 <html>
-  <style>
-    h1 {color:red;}
-  </style>
-  <h1> Lab 5 - Motor Control </h1>
-  <body>
-    <form action="/cgi-bin/Lab5Python.py" method = "POST">
-    Angle: <input type = "text" name= "anglevalue"> <br>
-    <input type = "submit" name = "submit" value = "Submit Angle">
-    <br>
-    <input type = "submit" name = "submit" value = "Zero Angle">
-    <br>
-    </form>
+<style>
+h1 {color:red;}
+</style>
+<h1> Lab 5 - Motor Control </h1>
+<body>
+<form action="/cgi-bin/stepper_control.py" method ="POST">
+Angle: <input type = "text" name= "anglevalue"> <br>
+<input type = "submit" name = "submit" value = "Submit Angle">
+<br>
+<input type = "submit" name = "submit" value = "Zero Angle">
+<br>
+</form>
 
-    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1550893/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Motor+Angle+vs+Time&type=line&xaxis=Time&yaxis=Motor+Angle"></iframe>
-    <br>
-    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1550893/widgets/374796"></iframe>
-  </body>
+<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1550893/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Motor+Angle+vs+Time&type=line&xaxis=Time&yaxis=Motor+Angle"></iframe>
+<br>
+<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1550893/widgets/374796"></iframe>
+</body>
 </html>
 """
 )
