@@ -1,3 +1,5 @@
+#!/usr/bin/python37all
+
 #necessary modules
 import json
 import cgi
@@ -8,7 +10,7 @@ from urllib.parse import urlencode
 
 #api key for thingspeak channel
 #change this to appropriate key!!!
-api = "6RLY9LJUYXDJ84BJ"
+api = "176TCARQARZ24LWV"
 
 #get data from html form
 data = cgi.FieldStorage()
